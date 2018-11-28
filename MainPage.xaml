@@ -64,42 +64,11 @@
                 </Pivot>
                 </StackPanel>
             </RelativePanel>
-            <SplitView Grid.Row="2" 
+        <SplitView Grid.Row="2" 
                    Name="splitview1"
                    IsPaneOpen="True" 
                    DisplayMode="CompactInline">
-                <SplitView.Pane>
-                    <Grid>
-                        <ScrollViewer>
-                            <ListBox>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                            <ListBoxItem>item</ListBoxItem>
-                        </ListBox>
-                        </ScrollViewer>
-                    </Grid>
-                </SplitView.Pane>
-                <Grid>
+            <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="125"></RowDefinition>
                         <RowDefinition></RowDefinition>
