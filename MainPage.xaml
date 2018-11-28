@@ -7,80 +7,130 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <RelativePanel>
-            <StackPanel Orientation="Horizontal" Name="headblock">
-                <Button Name="backbutton">
-                    <SymbolIcon Height="25" Width="50" Symbol="Back"></SymbolIcon>
-                </Button>
-                <TextBlock Margin="10,0,0,0" FontSize="20" Name="titleblock" Text="Title"></TextBlock>
-            </StackPanel>
-        </RelativePanel>
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <GridView>
-                <GridViewItem>grid1</GridViewItem>
-            </GridView>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
-            <Pivot Title="">
-                <PivotItem Header="pivot1">
-                    <ListView>
-                        <ListViewItem>1</ListViewItem>
-                        <ListViewItem>2</ListViewItem>
-                        <ListViewItem>3</ListViewItem>
-                        <ListViewItem>4</ListViewItem>
-                        <ListViewItem>5</ListViewItem>
-                        <ListViewItem>6</ListViewItem>
-                        <ListViewItem>7</ListViewItem>
-                        <ListViewItem>8</ListViewItem>
-                        <ListViewItem>10</ListViewItem>
-                    </ListView>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <RelativePanel>
+                <StackPanel Name="headBlock" Orientation="Horizontal">
+                    <Button Name="backbutton">
+                        <SymbolIcon Symbol="back"></SymbolIcon>
+                    </Button>
+                    <TextBlock Name="titleblock"
+                       VerticalAlignment="Center" Margin="10,0,0,0"
+                       Text="PivotApp">
+                    </TextBlock>
+                </StackPanel>
+            <StackPanel RelativePanel.Below="headBlock">
+                <Pivot>
+                        <PivotItem Header="Pivot">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <ScrollViewer>
+                                <ListView>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                    <ListViewItem Background="LightGray">tekst</ListViewItem>
+                                    <ListViewItem Background="White">tekst</ListViewItem>
+                                </ListView>
+                            </ScrollViewer>
+                        </Grid>
+                        
+                        </PivotItem>      
+                        <PivotItem Header="Pivot"></PivotItem>
+                        <PivotItem Header="Pivot"></PivotItem>
+                        <PivotItem Header="Pivot"></PivotItem>
+                </Pivot>
+                </StackPanel>
+            </RelativePanel>
+            <SplitView Grid.Row="2" 
+                   Name="splitview1"
+                   IsPaneOpen="True" 
+                   DisplayMode="CompactInline">
+                <SplitView.Pane>
+                    <Grid>
+                        <ScrollViewer>
+                            <ListBox>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                            <ListBoxItem>item</ListBoxItem>
+                        </ListBox>
+                        </ScrollViewer>
+                    </Grid>
+                </SplitView.Pane>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="125"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="125"></RowDefinition>
+                        <RowDefinition ></RowDefinition>
+                        <RowDefinition Height="125"></RowDefinition>
+                    </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
                     <GridView>
-                        <GridViewItem>xx</GridViewItem>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
                     </GridView>
-                </PivotItem>
-                <PivotItem Header="pivot2">
-                    <ListView>
-                        <ListViewItem>a</ListViewItem>
-                        <ListViewItem>b</ListViewItem>
-                        <ListViewItem>c</ListViewItem>
-                        <ListViewItem>d</ListViewItem>
-                        <ListViewItem>e</ListViewItem>
-                        <ListViewItem>f</ListViewItem>
-                        <ListViewItem>g</ListViewItem>
-                        <ListViewItem>h</ListViewItem>
-                        <ListViewItem>i</ListViewItem>
-                    </ListView>
-                </PivotItem>
-                <PivotItem Header="pivot3">
-                    <ListView>
-                        <ListViewItem>pivot3 tekst</ListViewItem>
-                    </ListView>
-                </PivotItem>
-                <PivotItem Header="pivot4">
-                    <ListView>
-                        <ListViewItem>pivot4 tekst</ListViewItem>
-                    </ListView>
-                </PivotItem>
-                <PivotItem Header="pivot5">
-                    <ListView>
-                        <ListViewItem>pivot5 tekst</ListViewItem>
-                    </ListView>
-                </PivotItem>
-            </Pivot>
-        </StackPanel>
-
-
-
-    </Grid>
-</Page>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                    <GridView>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
+                        <GridViewItem Background="LightGray">item</GridViewItem>
+                    </GridView>
+                </StackPanel>
+            </Grid>
+            </SplitView>
+        </Grid>
+    </Page>
